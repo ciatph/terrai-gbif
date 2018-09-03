@@ -61,10 +61,10 @@
             <div class="collapse navbar-collapse" id="navbarMenu">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#"><h3>Latin America</h3> <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#" onclick="toggleMap('la')"><h3>Latin America</h3> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><h3>Asia</h3></a>
+                  <a class="nav-link" href="#" onclick="toggleMap('asia')"><h3>Asia</h3></a>
                 </li>
               </ul>
             </div>
@@ -81,24 +81,49 @@
 
 
 <script>
-    var layerToggle;
     var map;
-    var latin_base;
-
-    var layers = {};
-    var sublayers = [];
     var basemap;
+    var mapLatin;
+    var legend;
+    var scale;
+    var layerToggle;
 
-    window.onload = function(){
-        // set window fullscreen height
-        var mapDom = document.getElementById('mapid');
-        mapDom.style.height = window.innerHeight + 'px';
+    /**
+     * Remove all current map layers and widgets 
+     */
+    var removeLayers = function(submap){
+        for(var i in submap){
+            console.log(i)
+            map.removeLayer(submap[i]);
+        }
 
-        // add OpenStreetMap basemap
-        basemap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        });
+        map.removeControl(layerToggle);
+        map.removeControl(legend);
+        map.removeControl(scale);
+    
+    };
 
+
+    /**
+     * Display the controls and layers of a deactivated map
+     */ 
+    var activateMap = function(submap){
+        var baseMaps = {
+            "Latin America Base Map": basemap
+        };
+
+        // add layer toggle
+        layerToggle = L.control.layers(baseMaps, submap.getOverlays()).addTo(map);
+
+        // add scale
+        scale = L.control.scale().addTo(map);
+
+        // add legend
+        legend = createLegend().addTo(map);
+    };    
+
+
+    var initLatinAmerica = function(basemap){
         mapLatin = new Map();
         mapLatin.init([-26.11598592533351, -81.91406250000001], 4, true);        
 
@@ -148,11 +173,27 @@
             layers: [basemap]
         });    
 
+        // add layer toggle
         layerToggle = L.control.layers(baseMaps, mapLatin.getOverlays()).addTo(map);
-        L.control.scale().addTo(map);
 
-        l = createLegend();
-        l.addTo(map);
+        // add scale
+        scale = L.control.scale().addTo(map);
+
+        // add legend
+        legend = createLegend().addTo(map);
+    };
+
+    window.onload = function(){
+        // set window fullscreen height
+        var mapDom = document.getElementById('mapid');
+        mapDom.style.height = window.innerHeight + 'px';
+
+        // add OpenStreetMap basemap
+        basemap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+        initLatinAmerica(basemap);
     };
 
 </script>
