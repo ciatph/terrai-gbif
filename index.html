@@ -148,7 +148,7 @@
 
     var initMap = function(basemap){
         mapLatin = new Map();
-        mapLatin.init([-26.11598592533351, -81.91406250000001], 4, true);        
+        mapLatin.init([-26.11598592533351, -81.91406250000001], 4);        
 
         mapLatin.addLayer({
             name: 'latin_base', layers: 'terrai-gbif:latin_terra_I_resamp_fromedit',
@@ -230,7 +230,7 @@
     var loadMapAsia = function(basemap){
         if(mapAsia === undefined){
             mapAsia = new Map();
-            mapAsia.init([113.15917968750001, 19.765977203034804], 4, true);        
+            mapAsia.init([113.15917968750001, 19.765977203034804], 4);        
 
             mapAsia.addLayer({
                 name: 'latin_base', layers: 'terrai-gbif:asia_Terra-I_resampled_fromedit',
