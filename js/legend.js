@@ -1,5 +1,6 @@
 // legends
 var legends_list = {};
+const maparea = { ASIA:1, LATIN_AMERICA:2 };
 
 // color list
 
