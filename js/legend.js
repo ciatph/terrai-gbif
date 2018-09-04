@@ -75,3 +75,15 @@ var toggleMap = function(maparea){
         }
     }
 };
+
+
+var createColorScale = function(){
+    holder.onAdd = function(map){
+        var div = L.DomUtil.create('div', 'info-legend');
+        div.innerHTML = '<h4>' + caption.label + '</h4>' + caption.description;
+        div.addEventListener('click', function(e){
+            console.log('i was clicked');
+        });
+        return div;
+    }
+};
