@@ -25,10 +25,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>-83.86645904260247164</xmin>
-      <ymin>-51.78987901703786179</ymin>
-      <xmax>-38.6886551523558353</xmax>
-      <ymax>-3.91086114232178872</ymax>
+      <xmin>-72.87079749257297578</xmin>
+      <ymin>-28.71774088216231391</ymin>
+      <xmax>-48.13604739465752402</xmax>
+      <ymax>-15.6535044527370566</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -236,10 +236,10 @@
           <rastershader>
             <colorrampshader colorRampType="EXACT" clip="0">
               <item alpha="0" value="0" label="0" color="#d7191c"/>
-              <item alpha="255" value="0.5" label="0.5" color="#fc8d59"/>
+              <item alpha="0" value="0.5" label="0.5" color="#fc8d59"/>
               <item alpha="255" value="1" label="1" color="#af8dc3"/>
               <item alpha="0" value="1.5" label="1.5" color="#abdda4"/>
-              <item alpha="255" value="2" label="2" color="#ff0000"/>
+              <item alpha="255" value="2" label="2" color="#fc8d59"/>
             </colorrampshader>
           </rastershader>
         </rasterrenderer>

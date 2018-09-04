@@ -16,11 +16,11 @@
                         </sld:Geometry>
                         <sld:Opacity>1</sld:Opacity>
                         <sld:ColorMap>
-                            <sld:ColorMapEntry color="#d7191c" label="0" opacity="0.0" quantity="0"/>
-                            <sld:ColorMapEntry color="#fc8d59" label="0.5" opacity="1.0" quantity="0.5"/>
+                            <sld:ColorMapEntry color="#d7191c" label="0" opacity="1.0" quantity="0"/>
+                            <sld:ColorMapEntry color="#fdae61" label="0.5" opacity="1.0" quantity="0.5"/>
                             <sld:ColorMapEntry color="#00ff00" label="1" opacity="1.0" quantity="1"/>
                             <sld:ColorMapEntry color="#abdda4" label="1.5" opacity="1.0" quantity="1.5"/>
-                            <sld:ColorMapEntry color="#2b83ba" label="2" opacity="1.0" quantity="2"/>
+                            <sld:ColorMapEntry color="#1100ff" label="2" opacity="1.0" quantity="2"/>
                         </sld:ColorMap>
                     </sld:RasterSymbolizer>
                 </sld:Rule>
