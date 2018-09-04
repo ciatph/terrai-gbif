@@ -63,11 +63,15 @@ var toggleMap = function(maparea){
     console.log(maparea);
 
     if(maparea === 'asia'){
-        removeLayers(mapLatin.layers);
-        loadMapAsia(basemap);
+        if(mapLatin !== undefined){
+            removeLayers(mapLatin.layers);
+            loadMapAsia(basemap);
+        }
     }
     else if(maparea === 'la'){
-        removeLayers(mapAsia.layers);
-        loadMapLatin(basemap);
+        if(mapAsia !== undefined){
+            removeLayers(mapAsia.layers);
+            loadMapLatin(basemap);
+        }
     }
 };
