@@ -60,7 +60,7 @@ For this project, we installed GeoServer with Apache Tomcat. More of its install
 			taiwania_cryptomerioides.tif
 			taiwania_add.tif
 
-			(SOUTH AMERICA)
+			(LATIN AMERICA)
 			latin_terra_I_resamp_fromedit.tif
 			p_andina_add.tif
 			p_salignus_add.tif
