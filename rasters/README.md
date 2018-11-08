@@ -5,7 +5,7 @@ This directory contains R-rendered GeoTIFF raster files of GBIF endangered speci
 These raster files are to be uploaded into `GeoServer` instance running in your local PC or other online hosting services. Please refer to the following guidelines for uploading the rasters:
 
 
-#### Raster Files Upload
+### Raster Files Upload
 
 GeoServer has various installation methods for different OS platforms in this [link](http://docs.geoserver.org/stable/en/user/installation/win_installer.html) instructions. 
 
