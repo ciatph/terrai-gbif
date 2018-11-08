@@ -1,3 +1,5 @@
 /node_modules
 /public
 /rasters/*.tif
+/rasters/asia/*.tif
+/rasters/latim_america/*.tif
