@@ -71,7 +71,7 @@ For this project, we installed GeoServer with Apache Tomcat. More of its install
 
 5. Apply the uploaded *.sld styles* to the GeoTiffs.  This can be accessed by setting the **Default Style** in the _**Publishing**_ tab.  Detailed instructions can be read in the [publishing tutorial](http://docs.geoserver.org/latest/en/user/gettingstarted/shapefile-quickstart/index.html) tutorial. Set the following sld styles to their corresponding GeoTiffs:
 
-	- `terrai-base.sld` = asia_Terra-I_resampled_fromedit, latin_terra_I_resamp_fromedit
+	- `terrai-base.sld` = asia_Terra-I\_resampled\_fromedit, latin\_terra\_I\_resamp\_fromedit
 	- `terra-add` = all rasters ending in \***\__add**_
 	- `terrai-species` = the rest of the rasters
 
@@ -84,7 +84,7 @@ For this project, we installed GeoServer with Apache Tomcat. More of its install
 
 ### Accessing the Rasters from the Online GeoServer WMS
 
-The raster layers can be accessed from the GeoServer instance hosted on [http://terrai-gbif.azurewebsites.net/](http://terrai-gbif.azurewebsites.net/) for this project.
+The raster layers can be accessed from the GeoServer instance hosted on [http://terraigbif-server.azurewebsites.net/](http://terraigbif-server.azurewebsites.net/) for this project.
 
 The WMS and list of available rasters can be accessed by web mapping frameworks such as leafletJS through the a `GetCapabilities` request from GeoServer:
 
@@ -99,7 +99,7 @@ The WMS and list of available rasters can be accessed by web mapping frameworks 
 
 ### Embedding the Matomo Website analytics Widget
 
-The website uses a self-hosted [**matomo**](https://matomo.org/) instance running on a *free tier* [000webhost](https://www.000webhost.com/) account. Matomo is an open-source analytics platform that have options for paid versions. Data analytics can be accessed by embedding the following iframe into a website's body:
+The website uses a self-hosted [**matomo**](https://matomo.org/) instance running on a *free tier* [000webhost](https://www.000webhost.com/) account for tracking web page visitor counts and other website analytics. Matomo is an open-source analytics platform that have options for paid versions. Data analytics can be accessed by embedding the following iframe into a website's body:
 
 
 	<div id="widgetIframe"><iframe width="100%" height="750" src="https://ciatph.000webhostapp.com/analytics/index.php?module=Widgetize&action=iframe&containerId=VisitOverviewWithGraph&widget=1&moduleToWidgetize=CoreHome&actionToWidgetize=renderWidgetContainer&idSite=2&period=day&date=2018-09-10&disableLink=1&widget=1&updated=1" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe></div>
