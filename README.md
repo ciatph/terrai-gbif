@@ -34,9 +34,9 @@ For this project, we installed GeoServer with Apache Tomcat. More of its install
 
 2. Create a workspace in GeoServer named `terrai-gbif`.
 	- Type the following for the **Namespace URI:** <br> 
-		- for GeoServer hostedonline Microsoft Azure <br>
+		- for GeoServer hosted online _**Microsoft Azure**_ <br>
 		`<PROJECT_NAME>.azurewebsites.net/geoserver/terrai-gbif` 
-		- for GeoServer hoster in localhost <br>
+		- for GeoServer hosted in _**localhost**_ <br>
 		`http://localhost:8080/geoserver/terrai-gbif` 
 	- Check the *Set as Default Workspace* checkbox
 	
@@ -47,9 +47,11 @@ For this project, we installed GeoServer with Apache Tomcat. More of its install
 	- terra-add.sld
 	
 4. Upload the Geotiff files as **GeoTIFF Data Store**. For more information, see [Creating Geotiff Data Stores](https://geoserver.geo-solutions.it/edu/en/adding_data/add_geotiff.html). 
-
-	 - Upload the GeoTiff files via FTP to <br> `/site/wwwroot/bin/apache-tomcat-8.5.24/webapps/geoserver/data/data/raster/`
-	 - NOTE: Rename the geotiff files such that they have no spaces in between before setting as data source. Make sure they are named as follows to be referenced in the same naming convention used as in the website codes (or you can edit them in the website codes from `main.js: initializeMaps()`):
+	- for GeoServer hosted online _**Microsoft Azure**_ <br>
+		- Upload the GeoTiff files via FTP to <br> `/site/wwwroot/bin/apache-tomcat-8.5.24/webapps/geoserver/data/data/raster/`
+	- for GeoServer hosted in _**localhost**_: Put the GeoTiff files anywhere in your hard drive.
+		
+	- NOTE: Rename the geotiff files such that they have no spaces in between before setting as data source. Make sure they are named as follows to be referenced in the same naming convention used as in the website codes (or you can edit them in the website codes from `main.js: initializeMaps()`):
 
 			(ASIA)
 			asia_Terra-I_resampled_fromedit.tif
