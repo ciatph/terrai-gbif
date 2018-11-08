@@ -33,10 +33,15 @@ For this project, we installed GeoServer with Apache Tomcat. More of its install
 1. Install [GeoServer](http://geoserver.org/) locally in your machine or in your online server. 
 
 2. Create a workspace in GeoServer named `terrai-gbif`.
-	- Type the following for the *Namespace URI:*  <br>`<PROJECT_NAME>.azurewebsites.net/geoserver/terrai-gbif`
+	- Type the following for the **Namespace URI:** <br> 
+		- for GeoServer hostedonline Microsoft Azure <br>
+		`<PROJECT_NAME>.azurewebsites.net/geoserver/terrai-gbif` 
+		- for GeoServer hoster in localhost <br>
+		`http://localhost:8080/geoserver/terrai-gbif` 
 	- Check the *Set as Default Workspace* checkbox
 	
 3. Upload GeoServer styles for rasters from `sld-styles`, using their filenames as names for the styles themselves. Use the `terrai-gbif` for workspace.
+
 	- terrai-base.sld
 	- terrai-species.sld
 	- terra-add.sld
